@@ -1,0 +1,91 @@
+.btn-weather {
+  margin-top: 15px;
+}
+.xyz {
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  /*   max-width: 350px; */
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.night_bg {
+  background: #0f2129;
+  background: -webkit-linear-gradient(#0f2129, #47334a);
+  background: -o-linear-gradient(#0f2129, #47334a);
+  background: -moz-linear-gradient(#0f2129, #47334a);
+  background: linear-gradient(#0f2129, #47334a);
+}
+.frosty_bg {
+  background: #29386f;
+  background: -webkit-linear-gradient(#29386f, #b8f5ff);
+  background: -o-linear-gradient(#29386f, #b8f5ff);
+  background: -moz-linear-gradient(#29386f, #b8f5ff);
+  background: linear-gradient(#29386f, #b8f5ff);
+  opacity: 0;
+  animation: frostyAnimation 20s ease infinite;
+  -webkit-animation: frostyAnimation 20s linear infinite;
+}
+
+.sunny_bg {
+  background: #ffbd3f;
+  background: -webkit-linear-gradient(#ffbd3f, #fff097);
+  background: -o-linear-gradient(#ffbd3f, #fff097);
+  background: -moz-linear-gradient(#ffbd3f, #fff097);
+  background: linear-gradient(#ffbd3f, #fff097);
+  opacity: 0;
+  animation: sunnyAnimation 20s ease infinite;
+  -webkit-animation: sunnyAnimation 20s linear infinite;
+}
+
+.text_container {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 3;
+}
+
+.degrees {
+  color: white;
+  display: block;
+  text-indent: -5px;
+  font-size: 100px;
+  font-weight: bold;
+  position: relative;
+  animation: degreesAnimation 20s ease infinite;
+  -webkit-animation: degreesAnimation 20s linear infinite;
+}
+.place {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+  animation: placeAnimation 20s ease infinite;
+  -webkit-animation: placeAnimation 20s linear infinite;
+}
+.weather {
+  color: #fff;
+}
+.hey {
+  background-color: #ffb38e;
+}
+.yo {
+  background-color: #424769;
+}
+.yos {
+  background-color: #2d3250;
+}
