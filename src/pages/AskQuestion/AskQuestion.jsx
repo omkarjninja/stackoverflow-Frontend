@@ -64,7 +64,7 @@ const AskQuestion = () => {
 
   const paymentHandler = async (plan) => {
     try {
-      const response = await fetch("https://project-res3.onrender.com/order", {
+      const response = await fetch("https://stackoverflow-backendagain.onrender.com//order", {
         method: "POST",
         body: JSON.stringify({
           plan,
