@@ -7,7 +7,7 @@ import { FaRobot } from "react-icons/fa";
 import OTPAuth from "./OTPAuth";
 
 const sendMessageAPI = async (message) => {
-  const res = await axios.post("https://project-res3.onrender.com/ask", {
+  const res = await axios.post("https://stackoverflow-backendagain.onrender.com/ask", {
     message,
   });
   return res.data;

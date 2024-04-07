@@ -8,7 +8,7 @@ const OTPAuth = ({ onOTPVerified }) => {
 
   const sendOTP = async () => {
     try {
-      await axios.post("https://project-res3.onrender.com/sendOTP", {
+      await axios.post("https://stackoverflow-backendagain.onrender.com/sendOTP", {
         emailAddress: email,
       });
       setIsOTPSent(true);
@@ -19,7 +19,7 @@ const OTPAuth = ({ onOTPVerified }) => {
 
   const verifyOTP = async () => {
     try {
-      await axios.post("https://project-res3.onrender.com/verifyOTP", {
+      await axios.post("https://stackoverflow-backendagain.onrender.com/verifyOTP", {
         enteredOTP: otp,
       });
       onOTPVerified();

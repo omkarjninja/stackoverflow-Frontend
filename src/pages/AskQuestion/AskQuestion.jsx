@@ -93,7 +93,7 @@ const AskQuestion = () => {
           };
 
           const validateRes = await fetch(
-            "https://project-res3.onrender.com/order/validate",
+            "https://stackoverflow-backendagain.onrender.com/order/validate",
             {
               method: "POST",
               body: JSON.stringify(body),
@@ -108,7 +108,7 @@ const AskQuestion = () => {
 
           if (jsonRes.msg === "success") {
             const res = await fetch(
-              "https://project-res3.onrender.com/user/updatePlan",
+              "https://stackoverflow-backendagain.onrender.com/user/updatePlan",
               {
                 method: "POST",
                 headers: {
