@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import Navbar from './Compents/Navbar/Navbar'
@@ -15,14 +15,26 @@ import Chat from './Compents/Chat/Chat'
 
 
 function App() {
+  var time = new Date();
+
+  const hour = time.getHours();
  const dispatch = useDispatch();
+
+ const [climate,setClimate] = useState("yo");
  
   useEffect(() => {
     dispatch(fetchAllQuestions());
     dispatch(fetchAllUsers())
+    if(time.getHours()<6){
+      setClimate("yos");
+    }else if(hour<18){
+      setClimate("hey");
+    }else{
+      setClimate("yo");
+    }
   }, [dispatch])
   return (
-    <div className="App">
+    <div className={`App ${climate}`}>
       <Router>
        <Navbar/>
        <Routes>
@@ -39,8 +51,9 @@ function App() {
 }
 
 function NotFoundPage() {
-  return <div>Page not found</div>;
+  return <div>This is StackOverFlow WebSite</div>;
 }
 
 
 export default App;
+
